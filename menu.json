@@ -1,0 +1,106 @@
+{
+  "categorias": [
+    { "id": "rolls", "nombre": "Rolls" },
+    { "id": "combinados", "nombre": "Combinados" },
+    { "id": "burritos", "nombre": "Burritos" },
+    { "id": "quesadillas", "nombre": "Quesadillas" },
+    { "id": "teppanyaki", "nombre": "Teppanyaki" },
+    { "id": "ensaladas", "nombre": "Ensaladas" },
+    { "id": "agregados", "nombre": "Agregados para ensaladas" }
+  ],
+  "variedadesCombinado": [
+    { "id": "sashimi-salmon", "tipo": "Sashimis", "nombre": "Sashimi de salmón", "descripcion": "Finas fetas de salmón.", "disponible": true },
+    { "id": "sashimi-langostinos", "tipo": "Sashimis", "nombre": "Sashimi de langostinos", "descripcion": "Finas fetas de langostinos.", "disponible": true },
+    { "id": "sashimi-trucha", "tipo": "Sashimis", "nombre": "Sashimi de trucha arcoíris", "descripcion": "Finas fetas de trucha arcoíris.", "disponible": true },
+
+    { "id": "niguiri-salmon", "tipo": "Niguiris", "nombre": "Niguiri de salmón", "descripcion": "Bocadito de arroz recubierto de salmón.", "disponible": true },
+    { "id": "niguiri-salmon-grillado", "tipo": "Niguiris", "nombre": "Niguiri de salmón grillado y lima", "descripcion": "Bocadito de arroz recubierto de salmón grillado y lima.", "disponible": true },
+    { "id": "niguiri-teppan", "tipo": "Niguiris", "nombre": "Niguiri Teppan", "descripcion": "Salmón tataki con escamas de sal marina, pimienta rosa y gotas de aceite de trufa blanca.", "disponible": true },
+
+    { "id": "temaki-salmon", "tipo": "Temakis", "nombre": "Temaki de salmón", "descripcion": "Cono de nori relleno de salmón.", "disponible": true },
+    { "id": "temaki-langostino", "tipo": "Temakis", "nombre": "Temaki de langostino", "descripcion": "Cono de nori relleno de langostino.", "disponible": true },
+
+    { "id": "maki-crazy", "tipo": "Makis", "nombre": "Maki Crazy", "descripcion": "Relleno de langostino, palta y philadelphia, con salmón por fuera.", "disponible": true },
+    { "id": "maki-salmon", "tipo": "Makis", "nombre": "Maki de salmón", "descripcion": "Maki de salmón.", "disponible": true },
+
+    { "id": "hot-pink-boom", "tipo": "Hot rolls", "nombre": "Pink Boom", "descripcion": "Finos cortes de salmón rosado, relleno de pasta boom, en tempura y fritos.", "disponible": true },
+    { "id": "hot-milano", "tipo": "Hot rolls", "nombre": "Milano Roll", "descripcion": "Relleno de mozzarella saborizada con albahaca, envuelto en salmón ahumado, rebozado y frito, bañado con aceite de albahaca.", "disponible": true },
+    { "id": "hot-crispy", "tipo": "Hot rolls", "nombre": "Crispy Roll", "descripcion": "Relleno de salmón rosado precocido en especias, rebozado y frito, con tomanesa de togarashi.", "disponible": true }
+  ],
+  "productos": [
+    { "id": "amapola", "categoria": "rolls", "nombre": "Amapola", "descripcion": "Roll relleno de palta, zanahoria al wok y queso philadelphia, cubierto con semillas de amapola.", "precio": 16000, "disponible": true },
+    { "id": "robles", "categoria": "rolls", "nombre": "Robles", "descripcion": "Roll de tomates secos, palta y zanahoria al wok, con pimiento rojo quemado y aceite de albahaca.", "precio": 16000, "disponible": true },
+    { "id": "classic", "categoria": "rolls", "nombre": "Classic", "descripcion": "Roll de arroz sushi con salmón fresco, palta, queso philadelphia y lluvia de sésamo mixto.", "precio": 18000, "disponible": true },
+    { "id": "crunch", "categoria": "rolls", "nombre": "Crunch", "descripcion": "Roll de arroz sushi con palta, zanahoria grillada, queso philadelphia, langostinos rebozados y lluvia de ciboulette.", "precio": 16000, "disponible": true },
+    { "id": "mix", "categoria": "rolls", "nombre": "Mix", "descripcion": "Roll de arroz sushi con salmón fresco, langostinos, palta, queso philadelphia y lluvia de sésamo mixto.", "precio": 18000, "disponible": true },
+    { "id": "passion", "categoria": "rolls", "nombre": "Passion", "descripcion": "Roll de arroz sushi con salmón fresco, hilos de tamago, palmitos, palta, queso philadelphia, batata frita y salsa de maracuyá.", "precio": 21000, "disponible": true },
+    { "id": "veggie", "categoria": "rolls", "nombre": "Veggie", "descripcion": "Roll de arroz sushi con palta, tomates secos, zanahoria al wok, rúcula, queso philadelphia y hilos de remolacha.", "precio": 16000, "disponible": true },
+
+    {
+      "id": "combinado-teppan", "categoria": "combinados", "nombre": "Combinado Teppan",
+      "descripcion": "Combinación de variedades de sushi seleccionadas por los sushiman.",
+      "disponible": true,
+      "armable": true,
+      "variantes": [
+        { "id": "combinado-teppan-15", "piezas": 15, "precio": 24000, "disponible": true },
+        { "id": "combinado-teppan-20", "piezas": 20, "precio": 37000, "disponible": true },
+        { "id": "combinado-teppan-30", "piezas": 30, "precio": 41000, "disponible": true },
+        { "id": "combinado-teppan-45", "piezas": 45, "precio": 65000, "disponible": true }
+      ]
+    },
+    {
+      "id": "combinado-eleccion", "categoria": "combinados", "nombre": "Combinado a elección",
+      "descripcion": "Elegí variedades de la carta con un mínimo de 5 piezas y un máximo de 10 piezas de cada variedad.",
+      "disponible": true,
+      "armable": true,
+      "variantes": [
+        { "id": "combinado-eleccion-15", "piezas": 15, "precio": 28500, "disponible": true },
+        { "id": "combinado-eleccion-20", "piezas": 20, "precio": 46000, "disponible": true },
+        { "id": "combinado-eleccion-30", "piezas": 30, "precio": 55000, "disponible": true },
+        { "id": "combinado-eleccion-45", "piezas": 45, "precio": 77000, "disponible": true }
+      ]
+    },
+    {
+      "id": "combinado-street", "categoria": "combinados", "nombre": "Combinado Street",
+      "descripcion": "Selección de rolls de langostinos, pescados blancos y otras delicias.",
+      "disponible": true,
+      "armable": true,
+      "variantes": [
+        { "id": "combinado-street-15", "piezas": 15, "precio": 22000, "disponible": true },
+        { "id": "combinado-street-20", "piezas": 20, "precio": 32000, "disponible": true },
+        { "id": "combinado-street-30", "piezas": 30, "precio": 44000, "disponible": true },
+        { "id": "combinado-street-45", "piezas": 45, "precio": 54000, "disponible": true }
+      ]
+    },
+    {
+      "id": "combinado-veggie", "categoria": "combinados", "nombre": "Combinado Veggie",
+      "descripcion": "Combinación de sabores frescos y orientales.",
+      "disponible": true,
+      "armable": true,
+      "variantes": [
+        { "id": "combinado-veggie-15", "piezas": 15, "precio": 24000, "disponible": true },
+        { "id": "combinado-veggie-20", "piezas": 20, "precio": 34000, "disponible": true },
+        { "id": "combinado-veggie-30", "piezas": 30, "precio": 46000, "disponible": true },
+        { "id": "combinado-veggie-45", "piezas": 45, "precio": 60000, "disponible": true }
+      ]
+    },
+
+    { "id": "burrito-carnitas", "categoria": "burritos", "nombre": "Carnitas", "descripcion": "Roll de tortilla de trigo con osobuco de ternera, tomate, cebolla, pimiento rojo y frijoles negros refritos.", "precio": 16000, "disponible": true, "nombrePedido": "Burrito Carnitas" },
+    { "id": "burrito-texas", "categoria": "burritos", "nombre": "Texas", "descripcion": "Roll de tortilla de trigo con bondiola de cerdo, salsa BBQ, cebollas caramelizadas y frijoles rojos refritos.", "precio": 16000, "disponible": true, "nombrePedido": "Burrito Texas" },
+
+    { "id": "quesadillas-pollo", "categoria": "quesadillas", "nombre": "Quesadillas de pollo", "descripcion": "Tortillas de trigo a la plancha rellenas de pollo, mix de quesos y crocante de bacon.", "precio": 15000, "disponible": true },
+    { "id": "quesadillas-veggie", "categoria": "quesadillas", "nombre": "Quesadillas veggie", "descripcion": "Tortillas de trigo a la plancha rellenas de mix de quesos, vegetales a la plancha y setas.", "precio": 13000, "disponible": true },
+    { "id": "quesadillas-jyq", "categoria": "quesadillas", "nombre": "Quesadillas Jamón y Queso", "descripcion": "Tortillas de trigo rellenas de jamón y mix de quesos.", "precio": 15000, "disponible": true },
+    { "id": "quesadillas-ternera", "categoria": "quesadillas", "nombre": "Quesadillas de ternera", "descripcion": "Tortillas de trigo rellenas de mix de quesos, ojo de bife y tomate.", "precio": 15000, "disponible": true },
+    { "id": "eby-quesadilla", "categoria": "quesadillas", "nombre": "Eby Quesadilla", "descripcion": "Tortillas de trigo a la plancha con langostinos grillados, mix de quesos, negui, hongos portobello y champiñones.", "precio": 15000, "disponible": true },
+
+    { "id": "salmon-grillado", "categoria": "teppanyaki", "nombre": "Salmón Grillado", "descripcion": "Salmón en salsa teriyaki con vegetales salteados, papas fritas y gohan de arroz.", "precio": 33000, "disponible": true },
+
+    { "id": "ensalada-teppan", "categoria": "ensaladas", "nombre": "Teppan", "descripcion": "Ensalada de zanahoria grillada, choclo, palmitos, palta, repollo, tomates cherry y lechuga con dip de crema ácida de soja y ciboulette.", "precio": 6000, "disponible": true, "nombrePedido": "Ensalada Teppan", "admiteAgregados": true },
+    { "id": "ensalada-mediterranea", "categoria": "ensaladas", "nombre": "Mediterránea", "descripcion": "Mix de verdes, palta, tomates secos, hongos portobello, champiñones y queso parmesano con dip de crema ácida de soja y ciboulette.", "precio": 6000, "disponible": true, "nombrePedido": "Ensalada Mediterránea", "admiteAgregados": true },
+
+    { "id": "agregado-langostinos", "categoria": "agregados", "nombre": "Langostinos", "descripcion": "Porción adicional de langostinos.", "precio": 3000, "disponible": true },
+    { "id": "agregado-salmon", "categoria": "agregados", "nombre": "Salmón grillado", "descripcion": "Porción adicional de salmón grillado.", "precio": 4000, "disponible": true },
+    { "id": "agregado-pollo", "categoria": "agregados", "nombre": "Pollo", "descripcion": "Porción adicional de pollo.", "precio": 3000, "disponible": true }
+  ]
+}

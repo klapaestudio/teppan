@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Teppan — Pedí online</title>
+  <meta name="description" content="Teppan — american sushi & street food en Villa María. Armá tu pedido y envialo por WhatsApp.">
+  <meta name="theme-color" content="#000000">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Teppan — Pedí online">
+  <meta property="og:description" content="American sushi & street food en Villa María. Armá tu pedido y envialo por WhatsApp.">
+  <meta property="og:image" content="img/og-image.png">
+  <meta property="og:locale" content="es_AR">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="intro" id="intro" role="dialog" aria-modal="true" aria-labelledby="intro-pregunta">
+    <div class="intro-contenido">
+      <div class="intro-logo"><canvas id="teppan-spray" width="1080" height="1080" role="img" aria-label="Teppan" data-manual="1"></canvas></div>
+      <p class="intro-pregunta" id="intro-pregunta">¿Viniste a mirar o a comer?</p>
+      <button type="button" class="btn btn-primary intro-boton" id="intro-entrar">Dale, tengo hambre</button>
+    </div>
+  </div>
+  <script>document.documentElement.classList.add("intro-abierta");</script>
+  <a class="skip" href="#carta">Saltar a la carta</a>
+
+  <header class="hero">
+    <div class="wrap">
+      <div class="hero-top">
+        <div>
+          <h1 class="brand"><img src="img/logo.png" alt="Teppan" width="720" height="432"></h1>
+          <p class="bajada" id="brand-bajada"></p>
+        </div>
+        <span class="estado" id="estado" role="status"></span>
+      </div>
+      <ul class="hero-links">
+        <li><a id="link-maps" target="_blank" rel="noopener">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          <span id="txt-direccion"></span></a></li>
+        <li><a id="link-ig" target="_blank" rel="noopener">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6"/></svg>
+          <span id="txt-ig"></span></a></li>
+      </ul>
+    </div>
+  </header>
+
+  <nav class="cats" aria-label="Buscador y categorías">
+    <div class="wrap">
+      <div class="buscador" role="search">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+        <label for="buscar" class="sr-only">Buscar un plato</label>
+        <input id="buscar" type="search" placeholder="Buscar un plato o ingrediente…" autocomplete="off" enterkeyhint="search">
+        <button type="button" class="icon-btn" id="buscar-limpiar" aria-label="Borrar búsqueda" hidden>
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+      <ul id="cats-list"></ul>
+    </div>
+  </nav>
+
+  <main id="carta" class="wrap" tabindex="-1">
+    <div id="aviso-cerrado" class="aviso" hidden></div>
+    <p id="resultado-busqueda" class="resultado-busqueda" role="status" aria-live="polite"></p>
+    <div id="secciones"><p class="cargando">Cargando la carta…</p></div>
+    <div id="sin-resultados" class="sin-resultados" hidden>
+      <p>No encontramos nada con “<span id="sin-resultados-txt"></span>”.</p>
+      <button type="button" class="btn btn-ghost" id="ver-toda">Ver toda la carta</button>
+    </div>
+  </main>
+
+  <footer class="pie">
+    <div class="wrap">
+      <p class="alergias" id="pie-alergias"></p>
+      <h2 class="pie-titulo">Horarios</h2>
+      <ul class="horarios" id="pie-horarios"></ul>
+      <p class="pie-datos" id="pie-datos"></p>
+    </div>
+  </footer>
+
+  <button type="button" class="barra-pedido" id="barra-pedido" hidden>
+    <span class="barra-cant" id="barra-cant"></span>
+    <span>Ver pedido</span>
+    <span class="barra-total" id="barra-total"></span>
+  </button>
+
+  <div class="backdrop" id="backdrop" hidden></div>
+  <section class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-titulo" hidden>
+    <header class="sheet-head">
+      <button type="button" class="icon-btn" id="sheet-atras" aria-label="Volver" hidden>
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg>
+      </button>
+      <h2 id="sheet-titulo" tabindex="-1"></h2>
+      <button type="button" class="icon-btn" id="sheet-cerrar" aria-label="Cerrar">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </header>
+    <div class="sheet-body" id="sheet-body"></div>
+    <footer class="sheet-foot" id="sheet-foot"></footer>
+  </section>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="config.js"></script>
+  <script src="js/core.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/aerosol.js"></script>
+  <script src="js/intro.js"></script>
+</body>
+</html>
